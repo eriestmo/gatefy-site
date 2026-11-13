@@ -1,0 +1,5 @@
+# Archivos de trabajo que GitHub Pages no debe publicar
+exclude:
+  - CLAUDE.md
+  - DESIGN.md
+  - .impeccable
