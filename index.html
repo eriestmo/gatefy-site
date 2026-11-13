@@ -178,7 +178,7 @@
         .words{ margin-top:auto; padding-top:1rem; font-size:.85rem; color:#7F8BA0; }
 
         /* seguridad */
-        .sec-list{ list-style:none; display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; }
+        .sec-list{ list-style:none; display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
         .sec-list b{ font-family:var(--disp); font-size:1.15rem; display:block; margin-bottom:.4rem; }
         .sec-list p{ color:var(--ink-2); font-size:.98rem; }
         .sec-list li{ border-top:2px solid var(--ink); padding-top:1rem; }
@@ -270,7 +270,7 @@
                     <a class="btn" href="#demo">Pedir una demo →</a>
                     <a class="lnk" href="#funciones">Ver cómo funciona</a>
                 </div>
-                <p class="compat"><i></i><span><b>Any hardware · One platform.</b> Compatible con terminales de reconocimiento facial y tarjeta Hikvision.</span></p>
+                <p class="compat"><i></i><span><b>Hoy, Hikvision.</b> Compatible con terminales de reconocimiento facial y tarjeta Hikvision; la plataforma está preparada para sumar otras marcas.</span></p>
             </div>
 
             <div class="panel" aria-label="Ejemplo del panel de eventos de Gatefy con datos ficticios">
@@ -311,7 +311,7 @@
                 <div class="reveal">
                     <h3>Una plataforma, muchas empresas</h3>
                     <p>La administración del edificio maneja las áreas comunes; cada empresa administra a su propia gente.</p>
-                    <ul><li>Altas y bajas de colaboradores con tarjeta o rostro</li><li>Carga masiva desde una plantilla</li><li>Reportes en Excel y PDF por empresa</li></ul>
+                    <ul><li>Altas y bajas de colaboradores con tarjeta o rostro</li><li>Carga masiva desde una plantilla, con vista previa y el error de cada fila</li><li>Reportes en Excel y PDF por empresa</li></ul>
                 </div>
                 <div class="feat-vis reveal" aria-hidden="true">
                     <div class="iso">
@@ -341,8 +341,8 @@
             <article class="feat">
                 <div class="reveal">
                     <h3>Quien ya no trabaja ahí, ya no entra</h3>
-                    <p>Cuando una persona sale de la empresa, su acceso se revoca en todos los equipos de inmediato, no al día siguiente.</p>
-                    <ul><li>Revocación inmediata en todas las terminales</li><li>Estado de cada equipo y alerta si alguno se desconecta</li><li>Niveles de acceso por puerta y por horario</li></ul>
+                    <p>Cuando una persona sale de la empresa, la baja sale hacia todos los equipos en ese momento, no al día siguiente, y el portal muestra cuáles ya la confirmaron.</p>
+                    <ul><li>Baja enviada a todas las terminales, con confirmación por equipo</li><li>Nunca se da por aplicada sin que el equipo la confirme</li><li>Estado de cada equipo y alerta si alguno se desconecta</li><li>Niveles de acceso por puerta y por horario</li></ul>
                 </div>
                 <div class="feat-vis reveal" aria-hidden="true">
                     <div class="revoke" id="revoke">
@@ -395,7 +395,9 @@
                 <li class="reveal"><b>Doble factor obligatorio</b><p>Todos los roles administrativos entran con clave y un código enviado al correo. Sin cuentas compartidas.</p></li>
                 <li class="reveal"><b>Biometría bajo control</b><p>Las fotos de rostro se guardan cifradas y nunca pasan por nubes de terceros del fabricante.</p></li>
                 <li class="reveal"><b>Mínimo de datos</b><p>En los equipos cada persona es un código interno, nunca su número de cédula.</p></li>
-                <li class="reveal"><b>Auditoría inalterable</b><p>Cada cambio y cada acceso privilegiado queda registrado, y el cliente puede verlo.</p></li>
+                <li class="reveal"><b>Auditoría inalterable</b><p>Cada cambio queda registrado con el antes y el después, sin exponer fotos, tarjetas ni documentos, y el cliente puede verlo.</p></li>
+                <li class="reveal"><b>Retención a su medida</b><p>Los eventos de acceso se guardan 24 meses por defecto, y cada edificio puede fijar entre 6 y 60.</p></li>
+                <li class="reveal"><b>Derecho a la supresión</b><p>Si una persona lo pide, sus datos personales se suprimen como exige la Ley 8968, y la auditoría lo registra.</p></li>
             </ul>
         </div>
     </section>
@@ -405,6 +407,7 @@
             <div class="head"><h2 id="faq-t" class="reveal">Preguntas frecuentes</h2><p></p></div>
             <div class="faq">
                 <details><summary>¿Tengo que cambiar mis equipos?</summary><p>Si su edificio ya tiene terminales Hikvision de reconocimiento facial o tarjeta compatibles, Gatefy trabaja con ellas. En la demo revisamos su inventario y le decimos qué modelos se integran.</p></details>
+                <details><summary>¿Y si mis equipos son de otra marca?</summary><p>Hoy Gatefy trabaja con Hikvision. La plataforma está preparada para otras marcas; en la demo vemos su caso y le decimos con claridad qué se puede integrar y cuándo.</p></details>
                 <details><summary>¿Hay que instalar algo en el edificio?</summary><p>La meta es no instalar servidores en sitio: los equipos se conectan de forma segura a la plataforma. Cada edificio requiere una revisión de su red antes de conectarse.</p></details>
                 <details><summary>¿Qué pasa si se cae el internet?</summary><p>Las terminales siguen abriendo a quien tiene acceso y guardan los eventos para enviarlos al volver la conexión. Recepción puede seguir registrando visitas en modo turno.</p></details>
                 <details><summary>¿Quién da el soporte?</summary><p>Soporte con tiquete y tiempos de respuesta acordados. Ningún cambio de firmware o configuración se aplica sin la aprobación de la administración.</p></details>
