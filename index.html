@@ -17,7 +17,8 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+    <link rel="preload" href="assets/fonts/GeneralSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -33,11 +34,13 @@
     }
     </script>
     <style>
+        @font-face{ font-family:'General Sans'; src:url('assets/fonts/GeneralSans-Semibold.woff2') format('woff2'); font-weight:600; font-display:swap; }
+        @font-face{ font-family:'General Sans'; src:url('assets/fonts/GeneralSans-Bold.woff2') format('woff2'); font-weight:700 800; font-display:swap; }
         /* Gatefy · crema y tinta, azul de marca para acciones, verde solo para "permitido" */
         :root{
             --cream:#F4F2E2; --paper:#FBFAF3; --ink:#0A1628; --ink-2:#2B3648; --mut:#5D6676; --line:rgba(10,22,40,.12);
             --blue:#2A6FEA; --blue-d:#1F58C4; --green:#1FA582; --green-b:#00E5A0; --grey:#9CA3A8; --red:#D9483B;
-            --disp:'Schibsted Grotesk', system-ui, sans-serif; --body:'Hanken Grotesk', system-ui, sans-serif; --mono:'JetBrains Mono', ui-monospace, monospace;
+            --disp:'General Sans', 'Space Grotesk', system-ui, sans-serif; --body:'Inter', system-ui, sans-serif; --mono:'JetBrains Mono', ui-monospace, monospace;
             color-scheme:light;
         }
         *{ box-sizing:border-box; margin:0; padding:0; }
@@ -60,9 +63,9 @@
         /* encabezado */
         .top{ position:sticky; top:0; z-index:50; background:rgba(244,242,226,.86); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid transparent; transition:border-color .3s; padding-top:env(safe-area-inset-top); }
         .top.is-scrolled{ border-color:var(--line); }
-        .top .wrap{ display:flex; align-items:center; justify-content:space-between; gap:1rem; height:68px; }
+        .top .wrap{ display:flex; align-items:center; justify-content:space-between; gap:1rem; height:72px; }
         .brand{ display:flex; align-items:center; gap:.55rem; text-decoration:none; font-family:var(--disp); font-weight:800; font-size:1.35rem; letter-spacing:-.03em; }
-        .brand img{ width:34px; height:34px; background:var(--ink); border-radius:9px; padding:3px; }
+        .brand img{ height:64px; width:auto; display:block; margin:-8px 0 -8px -10px; }
         .top nav{ display:flex; align-items:center; gap:1.6rem; font-size:.95rem; }
         .top nav a{ text-decoration:none; color:var(--ink-2); }
         .top nav a:hover{ color:var(--ink); }
@@ -243,7 +246,7 @@
 
     <div class="top" id="top">
         <div class="wrap">
-            <a class="brand" href="#inicio" aria-label="Gatefy, inicio"><img src="assets/gatefy-simbolo.svg" alt="" width="34" height="34">Gatefy</a>
+            <a class="brand" href="#inicio"><img src="assets/gatefy-logo.svg" alt="Gatefy" width="112" height="48"></a>
             <nav aria-label="Principal">
                 <a href="#funciones">Funciones</a>
                 <a href="#para-quien">Para quién</a>
@@ -266,7 +269,7 @@
                     <a class="btn" href="#demo">Pedir una demo →</a>
                     <a class="lnk" href="#funciones">Ver cómo funciona</a>
                 </div>
-                <p class="compat"><i></i>Compatible con terminales de reconocimiento facial y tarjeta Hikvision</p>
+                <p class="compat"><i></i><span><b>Any hardware · One platform.</b> Compatible con terminales de reconocimiento facial y tarjeta Hikvision.</span></p>
             </div>
 
             <div class="panel" aria-label="Ejemplo del panel de eventos de Gatefy con datos ficticios">
@@ -446,7 +449,7 @@
 
     <footer>
         <div class="wrap">
-            <span>© 2026 Gatefy · Presentado por <a href="https://techadvisorsla.com">Tech Advisors LA</a></span>
+            <img src="assets/gatefy-logo.svg" alt="Gatefy" width="93" height="40" style="height:40px;width:auto"><span>© 2026 Gatefy · Presentado por <a href="https://techadvisorsla.com">Tech Advisors LA</a></span>
             <span><a href="https://wa.me/50664656910">WhatsApp +506 6465-6910</a></span>
         </div>
     </footer>
