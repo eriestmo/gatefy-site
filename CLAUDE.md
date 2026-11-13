@@ -19,6 +19,7 @@ Landing de Gatefy en gatefy.techadvisorsla.com: un solo `index.html` estático c
 ## Diseño
 
 - `DESIGN.md` manda: colores, fuentes, formas y reglas.
+- Las variables CSS llevan el nombre del color o la fuente en `DESIGN.md` (`--surface`, `--mint`, `--text-2`, `--font-display`…). Un color nuevo se agrega primero en `DESIGN.md`.
 - Diseño nuevo: proponer 3 versiones distintas y que Eric elija una.
 - Ediciones de una línea: se cambia lo pedido y nada más.
 - Antes de publicar: axe-core sin fallas de contraste y revisión a 375px y en escritorio.
