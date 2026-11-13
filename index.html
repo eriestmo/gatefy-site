@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="es-CR">
 <head>
+    <!-- Consentimiento de cookies (por defecto: rechazado) -->
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+    var __c=null;try{__c=localStorage.getItem('gf_consent')}catch(e){}
+    gtag('consent','default',{analytics_storage:__c==='granted'?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
+    <!-- Google Tag Manager (mismo contenedor que techadvisorsla.com) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NF4L9KSF');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Gatefy | Control de acceso para edificios y condominios en Costa Rica</title>
@@ -10,7 +20,7 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CR">
     <meta property="og:title" content="Gatefy · Control de acceso que su edificio sí puede administrar">
-    <meta property="og:description" content="Datos aislados por empresa, visitas sin papel, eventos en vivo y soporte con tiquete. Compatible con terminales Hikvision.">
+    <meta property="og:description" content="Datos aislados por empresa, visitas sin papel, eventos en vivo y soporte con tiquete.">
     <meta property="og:url" content="https://gatefy.techadvisorsla.com/">
     <meta property="og:image" content="https://gatefy.techadvisorsla.com/assets/og-gatefy.png">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -26,7 +36,7 @@
       "name": "Gatefy",
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "Web, PWA",
-      "description": "Plataforma de control de acceso multiempresa para edificios corporativos, condominios e integradores, compatible con terminales Hikvision.",
+      "description": "Plataforma de control de acceso multiempresa para edificios corporativos, condominios e integradores.",
       "url": "https://gatefy.techadvisorsla.com/",
       "areaServed": "Costa Rica",
       "offers": { "@type": "Offer", "availability": "https://schema.org/PreOrder", "description": "Demostración a solicitud" },
@@ -36,7 +46,7 @@
     <style>
         @font-face{ font-family:'General Sans'; src:url('assets/fonts/GeneralSans-Semibold.woff2') format('woff2'); font-weight:600; font-display:swap; }
         @font-face{ font-family:'General Sans'; src:url('assets/fonts/GeneralSans-Bold.woff2') format('woff2'); font-weight:700 800; font-display:swap; }
-        /* Gatefy · crema y tinta, azul de marca para acciones, verde solo para "permitido" */
+        /* Gatefy · tema oscuro del portal; nombres de DESIGN.md */
         :root{
             /* tema oscuro del portal de Gatefy */ --surface:#0A1628; --surface-band:#0E1D38; --card:#112240; --text:#F0F6FF; --text-2:#C3CFDF; --muted:#8FA3BB; --line:rgba(240,246,255,.1); --on-mint:#06231A;
             --mint:#00E5A0; --mint-hover:#5CF2C3; --danger-text:#FF8C80; --danger:#FF7A7A;
@@ -57,6 +67,15 @@
         .btn{ display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-body); font-weight:600; font-size:1rem; text-decoration:none; border:0; cursor:pointer; padding:.95rem 1.5rem; border-radius:12px; background:var(--mint); color:var(--on-mint); transition:background .2s, transform .2s; }
         .btn:hover{ background:var(--mint-hover); transform:translateY(-1px); }
         .btn:active{ transform:scale(.98); }
+        .who-link{ display:inline-block; margin-top:1rem; color:var(--mint); font-weight:600; text-decoration:none; }
+        .who-link:hover{ color:var(--mint-hover); text-decoration:underline; }
+        .ck-banner{ position:fixed; left:1rem; right:1rem; bottom:1rem; z-index:50; max-width:560px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:1rem 1.1rem; box-shadow:0 18px 40px rgba(0,0,0,.45); display:flex; flex-wrap:wrap; gap:.8rem 1rem; align-items:center; }
+        .ck-banner p{ flex:1 1 260px; margin:0; font-size:.9rem; color:var(--text-2); }
+        .ck-banner a{ color:var(--mint); }
+        .ck-banner .ck-actions{ display:flex; gap:.6rem; }
+        .ck-banner button{ font:600 .9rem var(--font-body); border-radius:10px; padding:.6rem 1rem; cursor:pointer; border:1px solid var(--mint); }
+        .ck-banner .ck-no{ background:transparent; color:var(--text); }
+        .ck-banner .ck-yes{ background:var(--mint); color:var(--on-mint); }
         .lnk{ font-weight:600; text-decoration:none; border-bottom:1.5px solid var(--line); padding-bottom:2px; transition:border-color .2s; }
         .lnk:hover{ border-color:var(--text); }
 
@@ -244,6 +263,7 @@
     </style>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF4L9KSF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a class="skip" href="#contenido">Saltar al contenido</a>
 
     <div class="top" id="top">
@@ -381,7 +401,7 @@
             <div class="who-grid">
                 <article class="reveal"><span class="tag">Demos disponibles</span><h3>Edificios corporativos</h3><p>Centros corporativos con varias empresas inquilinas, recepción, parqueo y pisos con acceso restringido.</p><span class="words">Edificio · Empresas · Colaboradores · Recepción</span></article>
                 <article class="reveal"><span class="tag soon">Próximamente</span><h3>Condominios y torres mixtas</h3><p>Residenciales de casas, torres de apartamentos y edificios donde conviven oficinas, viviendas y locales.</p><span class="words">Residencial · Unidades · Residentes · Caseta</span></article>
-                <article class="reveal"><span class="tag">Demos disponibles</span><h3>Integradores y empresas de seguridad</h3><p>Ofrezca Gatefy con su propia marca: su logo y colores aparecen desde el inicio de sesión. Administra a sus clientes sin ver sus datos personales.</p><span class="words">Marca blanca · Varios clientes · Soporte propio</span></article>
+                <article class="reveal"><span class="tag">Demos disponibles</span><h3>Integradores y empresas de seguridad</h3><p>Ofrezca Gatefy con su propia marca: su logo y colores aparecen desde el inicio de sesión. Administra a sus clientes sin ver sus datos personales.</p><span class="words">Marca blanca · Varios clientes · Soporte propio</span><a class="who-link" data-evento="gatefy_integrador" href="https://wa.me/50664656910?text=Hola%2C%20soy%20integrador%20o%20empresa%20de%20seguridad%20y%20me%20interesa%20ofrecer%20Gatefy%20a%20mis%20clientes." target="_blank" rel="noopener">Hablemos como integrador →</a></article>
             </div>
         </div>
     </section>
@@ -530,8 +550,36 @@
             var v = function(id){ return document.getElementById(id).value.trim(); };
             var text = ['Hola, quiero una demo de Gatefy.', '', 'Nombre: ' + v('fNombre'), 'Organización: ' + v('fOrg'), 'Tipo de sitio: ' + v('fTipo'),
                 v('fPuntos') ? 'Puntos de acceso: ' + v('fPuntos') : null, 'Contacto: ' + v('fContacto')].filter(function(l){ return l !== null; }).join('\n');
-            (window.dataLayer = window.dataLayer || []).push({ event:'gatefy_demo', tipo: v('fTipo') });
+            (window.dataLayer = window.dataLayer || []).push({ event: /integrador/i.test(v('fTipo')) ? 'gatefy_integrador' : 'gatefy_demo', tipo: v('fTipo'), origen: 'formulario' });
             window.open('https://wa.me/50664656910?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        });
+    })();
+    </script>
+    <script>
+    /* Aviso de cookies y clics a WhatsApp. El permiso se guarda aparte del de techadvisorsla.com (otro subdominio). */
+    (function(){
+        'use strict';
+        var KEY = 'gf_consent';
+        function gtag(){ window.dataLayer.push(arguments); }
+        function choose(v){
+            try { localStorage.setItem(KEY, v); } catch(e) {}
+            gtag('consent', 'update', { analytics_storage: v === 'granted' ? 'granted' : 'denied', ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied' });
+            var b = document.querySelector('.ck-banner'); if (b) b.remove();
+        }
+        var saved = null; try { saved = localStorage.getItem(KEY); } catch(e) {}
+        if (saved !== 'granted' && saved !== 'denied') {
+            var b = document.createElement('div');
+            b.className = 'ck-banner'; b.setAttribute('role', 'dialog'); b.setAttribute('aria-label', 'Aviso de cookies');
+            b.innerHTML = '<p>Usamos cookies de medición de Google para saber qué le resulta útil. Solo se activan si usted las acepta. <a href="https://techadvisorsla.com/privacidad.html#cookies">Más información</a></p>' +
+                '<div class="ck-actions"><button type="button" class="ck-no">Rechazar</button><button type="button" class="ck-yes">Aceptar</button></div>';
+            document.body.appendChild(b);
+            b.querySelector('.ck-yes').addEventListener('click', function(){ choose('granted'); });
+            b.querySelector('.ck-no').addEventListener('click', function(){ choose('denied'); });
+        }
+        document.addEventListener('click', function(e){
+            var a = e.target.closest && e.target.closest('a[href*="wa.me/"]');
+            if (!a) return;
+            window.dataLayer.push(a.dataset.evento ? { event: a.dataset.evento, origen: 'enlace' } : { event: 'click_whatsapp', boton: a.textContent.trim().slice(0, 60) });
         });
     })();
     </script>
